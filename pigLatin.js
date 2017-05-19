@@ -21,5 +21,13 @@ $( document ).ready( function(){
       } // end if
     } // end for
     console.log( 'first vowel at:', lowest );
+    // split the word at that vowel
+    var start = word.slice( 0, lowest );
+    var end = word.slice( lowest, word.length );
+    var pigLatinizedWord = end + start + 'ay';
+    console.log( pigLatinizedWord );
+    // display on dom
+    $( '#outputDiv' ).append( '</p>' + word + ": " + pigLatinizedWord + '</p>')
+    return pigLatinizedWord;
   }); // end button on click
 });
